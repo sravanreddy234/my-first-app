@@ -1,11 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">     
-      <label>UserName</label><input type = "text" class = "form-control" [(ngModel)] = "username">
-     <button class= "btn btn-primary" [disabled] = "username===''" (click) = "username=''">Reset username</button>
-      <p>{{ username }}</p>
-<hr>
-<app-servers></app-servers>
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onToggleDetails()">Display details</button>
+      <p *ngIf="showSecret">'secret password = tuna'</p>
+      <div *ngFor="let logItem of log; let i = index" [ngStyle]="{'background-color': i >=4 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text': i >= 4}"> {{ logItem}}
+      </div>
+      <hr>
+      <app-servers></app-servers>
     </div>
   </div>
 </div>

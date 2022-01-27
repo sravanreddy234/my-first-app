@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styles: ['h3{color: green;}']
 })
 export class AppComponent {
-  username = "";
+  showSecret = false;
+  log = [];
+  onToggleDetails(){
+    this.showSecret = !this.showSecret;
+    this.log.push(new Date());
+  }
 }
