@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styles: ['h3{color: green;}']
 })
 export class AppComponent {
-  
+  username = "";
 }

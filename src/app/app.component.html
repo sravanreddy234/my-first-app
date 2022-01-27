@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">     
-<h3>Hello World</h3>
+      <label>UserName</label><input type = "text" class = "form-control" [(ngModel)] = "username">
+     <button class= "btn btn-primary" [disabled] = "username===''" (click) = "username=''">Reset username</button>
+      <p>{{ username }}</p>
 <hr>
 <app-servers></app-servers>
     </div>
